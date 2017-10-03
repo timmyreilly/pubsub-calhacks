@@ -38,7 +38,7 @@ exports.send = function(images, callback){
  * @param {Function} callback
  */
 exports.get = function(callback){
-    redis.lrange('iamges', 0, -1, function(err, data){
+    redis.lrange('images', 0, -1, function(err, data){
         if (err) return callback(err, null); 
         callback(null, data.map(JSON.parse)); 
     }); 

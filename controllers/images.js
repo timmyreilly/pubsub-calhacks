@@ -27,7 +27,7 @@ exports.send = function (req, res, next) {
 }; 
 
 /**
- * Get 15 images 
+ * Get 15 images from model 
  */
 
 exports.get = function(req, res){
