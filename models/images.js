@@ -29,7 +29,6 @@ exports.trim = function(){
  * @param {Function} callback
  */
 exports.send = function(images, callback){
-    console.log("images: " + images); 
     images.forEach(broadcast.send);
     callback(null, null); 
 }; 
