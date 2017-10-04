@@ -20,7 +20,7 @@ exports.save = function(images, callback) {
  * Trim down the redis list 
  */
 exports.trim = function(){
-    redis.ltrim('images', 0, 14);
+    redis.ltrim('images', 0, 15);
 }; 
 
 /**
@@ -29,6 +29,7 @@ exports.trim = function(){
  * @param {Function} callback
  */
 exports.send = function(images, callback){
+    console.log("images: " + images.toString()); 
     images.forEach(broadcast.send);
     callback(null, null); 
 }; 
